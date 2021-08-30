@@ -2,7 +2,7 @@ import socket
 
 if      __name__ == "__main__":
     ip = "127.0.0.1"
-    port = 1234
+    port = 5000
     
     server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     server.bind((ip, port))
@@ -10,8 +10,12 @@ if      __name__ == "__main__":
 
 
     while True:
-        client, addr = server.accept()
-        print("Client connected: {address[0]:address[1]}")
-
-
+        client, address = server.accept()
+        print(f"{address} connected")
+        # print(f"Client connected: - {address[0]:address[1]}")
+    
+    string = client.recv(1024)
+    string = string.decode("utf-8")
+    print(string)
+    client.close()
    
