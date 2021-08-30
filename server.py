@@ -12,7 +12,7 @@ if      __name__ == "__main__":
     while True:
         client, address = server.accept()
         print(f"{address} connected")
-        # print(f"Client connected: - {address[0]:address[1]}")
+        
     
     string = client.recv(1024)
     string = string.decode("utf-8")
