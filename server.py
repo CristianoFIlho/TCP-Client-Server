@@ -1,6 +1,6 @@
 import socket
 
-if  __name___ == "__main__":
+if      __name__ == "__main__":
     ip = "127.0.0.1"
     port = 1234
     
@@ -14,3 +14,4 @@ if  __name___ == "__main__":
         print("Client connected: {address[0]:address[1]}")
 
 
+   
