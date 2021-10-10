@@ -25,7 +25,7 @@ function parseConfig() {
 let server = net.createServer(undefined, (c) => {
     c.on('data', data => handleData(data, c))
     c.on('error', err => console.log(err))
-}).listen(config.port, "0.0.0.0", () => {
+}).listen(config.port, "127.0.0.1 ", () => {
     console.log(`Listening on ${config.ip}:${config.port}`)
 });
 
